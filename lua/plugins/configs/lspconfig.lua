@@ -102,16 +102,29 @@ if #addlsp_confs ~= 0 then
    require(addlsp_confs).setup_lsp(on_attach, capabilities)
 end
 
+-- Setup for some costume language servers
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.pyright.setup{}
-require'lspconfig'.emmet_ls.setup{}
 require'lspconfig'.svelte.setup{}
+require'lspconfig'.crystalline.setup{}
 
+-- Setup for the emmet language server
+local lspconfig = require'lspconfig'
+local configs = require'lspconfig/configs' 
 
---Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'lspconfig'.html.setup {
-  capabilities = capabilities,
-}
+if not lspconfig.emmet_ls then    
+  configs.emmet_ls = {    
+    default_config = {    
+      cmd = {'emmet-ls', '--stdio'};
+      filetypes = {'html', 'css', 'blade'};
+      root_dir = function(fname)    
+        return vim.loop.cwd()
+      end;    
+      settings = {};    
+    };    
+  }    
+end    
+require 'lspconfig'.emmet_ls.setup{ capabilities = capabilities; }
