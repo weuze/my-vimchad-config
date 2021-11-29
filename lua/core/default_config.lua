@@ -1,5 +1,4 @@
--- IMPORTANT NOTE : This is default config, so dont change anything here.
--- use custom/chadrc.lua instead
+-- use custom/chadrc.lua instea
 
 local M = {}
 M.options, M.ui, M.mappings, M.plugins = {}, {}, {}, {}
@@ -18,7 +17,7 @@ M.options = {
    number = true,
    -- relative numbers in normal mode tool at the bottom of options.lua
    numberwidth = 2,
-   relativenumber = false,
+   relativenumber = true,
    expandtab = true,
    shiftwidth = 2,
    smartindent = true,
@@ -118,7 +117,12 @@ M.mappings = {
    new_tab = "<C-t>b", -- open a new vim tab
    save_file = "<C-s>", -- save file using :w
    theme_toggler = "<leader>tt", -- for theme toggler, see in ui.theme_toggler
+
+   -- make mappings for the gitgutter plugin
+   gg_git_status = "<leader>gs",
+
    -- navigation in insert mode, only if enabled in options
+
    insert_nav = {
       backward = "<C-h>",
       end_of_line = "<C-e>",
@@ -138,8 +142,7 @@ M.mappings = {
    terminal = {
       -- multiple mappings can be given for esc_termmode and esc_hide_termmode
       -- get out of terminal mode
-      esc_termmode = { "jk" }, -- multiple mappings allowed
-      -- get out of terminal mode and hide it
+      esc_termmode = { "jj" }, -- multiple mappings allowed get out of terminal mode and hide it
       esc_hide_termmode = { "JK" }, -- multiple mappings allowed
       -- show & recover hidden terminal buffers in a telescope picker
       pick_term = "<leader>W",
@@ -167,13 +170,13 @@ M.mappings.plugins = {
    dashboard = {
       bookmarks = "<leader>bm",
       new_file = "<leader>fn", -- basically create a new buffer
-      open = "<leader>db", -- open dashboard
+      open = "<leader>bb", -- open dashboard
       session_load = "<leader>l", -- load a saved session
       session_save = "<leader>s", -- save a session
    },
    -- map to <ESC> with no lag
    better_escape = { -- <ESC> will still work
-      esc_insertmode = { "jk" }, -- multiple mappings allowed
+      esc_insertmode = { "jj" }, -- multiple mappings allowed
    },
    -- file explorer/tree
    nvimtree = {

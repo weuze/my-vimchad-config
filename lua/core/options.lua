@@ -27,7 +27,7 @@ opt.mouse = options.mouse
 -- Numbers
 opt.number = options.number
 opt.numberwidth = options.numberwidth
-opt.relativenumber = options.relativenumber
+opt.relativenumber = options.relativenumber 
 opt.ruler = options.ruler
 
 -- disable nvim intro

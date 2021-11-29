@@ -101,3 +101,17 @@ local addlsp_confs = require("core.utils").load_config().plugins.options.lspconf
 if #addlsp_confs ~= 0 then
    require(addlsp_confs).setup_lsp(on_attach, capabilities)
 end
+
+require'lspconfig'.gopls.setup{}
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.emmet_ls.setup{}
+require'lspconfig'.svelte.setup{}
+
+
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}

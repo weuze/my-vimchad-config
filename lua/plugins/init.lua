@@ -262,5 +262,8 @@ return packer.startup(function()
       end,
    }
 
+   use 'tpope/vim-fugitive' -- Git commands
+   use 'airblade/vim-gitgutter'
+
    require("core.hooks").run("install_plugins", use)
 end)
