@@ -81,6 +81,7 @@ M.misc = function()
       map("n", maps.new_tab, ":tabnew <CR>") -- new tabs
       map("n", maps.line_number_toggle, ":set nu! <CR>") -- toggle numbers
       map("n", maps.save_file, ":w <CR>") -- ctrl + s to save file
+      map("n", maps.command_mode, ":")
 
       -- terminal mappings --
       local term_maps = maps.terminal

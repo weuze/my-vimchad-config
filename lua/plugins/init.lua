@@ -211,7 +211,7 @@ return packer.startup(function()
 
    use {
       "glepnir/dashboard-nvim",
-      disable = not plugin_settings.status.dashboard,
+      -- disable = not plugin_settings.status.dashboard,
       config = override_req("dashboard", "plugins.configs.dashboard"),
       setup = function()
          require("core.mappings").dashboard()

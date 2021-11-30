@@ -116,7 +116,8 @@ M.mappings = {
    new_buffer = "<S-t>", -- open a new buffer
    new_tab = "<C-t>b", -- open a new vim tab
    save_file = "<C-s>", -- save file using :w
-   theme_toggler = "<leader>tt", -- for theme toggler, see in ui.theme_toggler
+   theme_toggler = "<leader>tt", -- for theme toggler, see in ui.theme_toggler,
+   command_mode = "<leader><leader>", -- go to cammand mode
 
    -- make mappings for the gitgutter plugin
    gg_git_status = "<leader>gs",
@@ -164,7 +165,8 @@ M.mappings.plugins = {
    },
    -- easily (un)comment code, language aware
    comment = {
-      toggle = "<leader>/", -- toggle comment (works on multiple lines)
+     -- toggle = "<leader>/", -- toggle comment (works on multiple lines)
+      toggle = "<leader>cc", -- toggle comment (works on multiple lines)
    },
    -- NeoVim 'home screen' on open
    dashboard = {

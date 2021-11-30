@@ -36,4 +36,9 @@ M.plugins = {
    default_plugin_config_replace = {},
 }
 
+
+M.mappings = {
+  command_mode = "<leader><leader>"
+}
+
 return M
