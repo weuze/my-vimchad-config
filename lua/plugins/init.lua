@@ -261,9 +261,12 @@ return packer.startup(function()
          require("core.mappings").telescope()
       end,
    }
-
+   
+   -- costume plugins 
    use 'tpope/vim-fugitive' -- Git commands
-   use 'airblade/vim-gitgutter'
+   use 'mattn/emmet-vim'
+   use 'sbdchd/neoformat'
+   -- use 'glepnir/dashboard-nvim'
 
    require("core.hooks").run("install_plugins", use)
 end)
