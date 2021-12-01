@@ -3,7 +3,7 @@ local g = vim.g
 g.dashboard_disable_at_vimenter = 0
 g.dashboard_disable_statusline = 1
 g.dashboard_default_executive = "telescope"
-g.dashboard_custom_header = {
+local default_custom_header = {
    "                                   ",
    "                                   ",
    "                                   ",
@@ -20,6 +20,20 @@ g.dashboard_custom_header = {
    "       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
    "                                   ",
 }
+local weuze_img = {
+   " █     █░▓█████  █    ██ ▒███████▒▓█████ ",
+   "▓█░ █ ░█░▓█   ▀  ██  ▓██▒▒ ▒ ▒ ▄▀░▓█   ▀ ",
+   "▒█░ █ ░█ ▒███   ▓██  ▒██░░ ▒ ▄▀▒░ ▒███   ",
+   "░█░ █ ░█ ▒▓█  ▄ ▓▓█  ░██░  ▄▀▒   ░▒▓█  ▄ ",
+   "░░██▒██▓ ░▒████▒▒▒█████▓ ▒███████▒░▒████▒",
+   "░ ▓░▒ ▒  ░░ ▒░ ░░▒▓▒ ▒ ▒ ░▒▒ ▓░▒░▒░░ ▒░ ░",
+   "  ▒ ░ ░   ░ ░  ░░░▒░ ░ ░ ░░▒ ▒ ░ ▒ ░ ░  ░",
+   "  ░   ░     ░    ░░░ ░ ░ ░ ░ ░ ░ ░   ░   ",
+   "    ░       ░  ░   ░       ░ ░       ░  ░",
+   "                         ░               "
+}
+
+g.dashboard_custom_header = weuze_img
 
 g.dashboard_custom_section = {
    a = { description = { "  Find File                 SPC f f" }, command = "Telescope find_files" },
@@ -31,5 +45,5 @@ g.dashboard_custom_section = {
 }
 
 g.dashboard_custom_footer = {
-   "   ",
-}
+   "WHERE I FIND PEACE ❤️"
+} 
