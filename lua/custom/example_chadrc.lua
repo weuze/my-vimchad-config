@@ -36,7 +36,6 @@
 --    default_plugin_config_replace = {},
 -- }
 
-
 -- M.mappings = {
 -- }
 

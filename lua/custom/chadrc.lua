@@ -11,7 +11,7 @@ M.options = {
 M.ui = {
    theme = "gruvbox",
    transparency = true,
- }
+}
 
 -- NvChad included plugin options & overrides
 M.plugins = {
@@ -30,9 +30,8 @@ M.plugins = {
    default_plugin_config_replace = {},
 }
 
-
-M.mappings = {  
-  command_mode = "<leader><leader>", -- set the command mode 
+M.mappings = {
+   command_mode = "<leader><leader>", -- set the command mode
 
    -- make mappings for the gitgutter plugin
    gg_git_status = "<leader>gs",
