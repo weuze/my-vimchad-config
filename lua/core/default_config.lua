@@ -17,7 +17,7 @@ M.options = {
    number = true,
    -- relative numbers in normal mode tool at the bottom of options.lua
    numberwidth = 2,
-   relativenumber = true,
+   relativenumber = false,
    expandtab = true,
    shiftwidth = 2,
    smartindent = true,
@@ -52,7 +52,7 @@ M.ui = {
    },
    -- Enable this only if your terminal has the colorscheme set which nvchad uses
    -- For Ex : if you have onedark set in nvchad, set onedark's bg color on your terminal
-   transparency = false,
+   transparency = true,
 }
 
 -- these are plugin related options
@@ -117,7 +117,6 @@ M.mappings = {
    new_tab = "<C-t>b", -- open a new vim tab
    save_file = "<C-s>", -- save file using :w
    theme_toggler = "<leader>tt", -- for theme toggler, see in ui.theme_toggler,
-   command_mode = "<leader><leader>", -- go to cammand mode
 
    -- make mappings for the gitgutter plugin
    gg_git_status = "<leader>gs",
